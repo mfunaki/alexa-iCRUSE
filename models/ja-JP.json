@@ -1,0 +1,96 @@
+{
+  "languageModel": {
+    "types": [
+      {
+        "name": "CategoryList",
+        "values": [
+          {
+            "id": "ID_RESTAURANT",
+            "name": {
+              "value": "レストラン",
+              "synonyms": [
+                "食事"
+              ]
+            }
+          },
+          {
+            "id": "ID_WEATHER",
+            "name": {
+              "value": "天気",
+              "synonyms": [
+                "雨降る",
+                "傘いる"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "PlaceList",
+        "values": [
+          {
+            "id": null,
+            "name": {
+              "value": "目黒",
+              "synonyms": [
+                "アマゾン"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "竹ノ塚",
+              "synonyms": [
+                "自宅"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "半蔵門",
+              "synonyms": [
+                "SAP"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "intents": [
+      {
+        "name": "AMAZON.CancelIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.HelpIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.StopIntent",
+        "samples": []
+      },
+      {
+        "name": "QueryByCategoryAtLocationIntent",
+        "samples": [
+          "{Place} の近くの {Category} を教えて",
+          "{Place} の周辺の {Category} は",
+          "{Place} あたりにある {Category} は何",
+          "{Place} 周辺の {Category}"
+        ],
+        "slots": [
+          {
+            "name": "Place",
+            "type": "PlaceList"
+          },
+          {
+            "name": "Category",
+            "type": "CategoryList"
+          }
+        ]
+      }
+    ],
+    "invocationName": "アイクルーズ"
+  }
+}
